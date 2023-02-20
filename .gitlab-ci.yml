@@ -52,6 +52,8 @@ test:
   stage: test
   tags:
     - $TEST_TAGS
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
 
