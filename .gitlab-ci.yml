@@ -28,9 +28,9 @@ stages:
 
 
 variables:
-  BUILD_TAGS: "kawa-runner1"
+  BUILD_TAGS: "runner-kawa1"
   TEST_TAGS: "kawa-runner2"
-  COVERAGE_TAGS: "runner-kawa2"
+  COVERAGE_TAGS: "kawa-runner2"
   DEPLOY_TAGS: "runner-kawa1"
 
 
