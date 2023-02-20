@@ -28,10 +28,10 @@ stages:
 
 # Configuration des tags pour les jobs
 variables:
-  BUILD_TAGS: "build,kawa1"
-  TEST_TAGS: "test,kawa1"
-  COVERAGE_TAGS: "coverage,kawa1"
-  DEPLOY_TAGS: "deploy,kawa1"
+  BUILD_TAGS: "build,kawa-runner1"
+  TEST_TAGS: "test,kawa-runner1"
+  COVERAGE_TAGS: "coverage,kawa-runner1"
+  DEPLOY_TAGS: "deploy,kawa-runner1"
 
 # Job de build : compile l'API
 build:
