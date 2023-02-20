@@ -44,7 +44,7 @@ build:
     - dotnet build --configuration Release
   artifacts:
     paths:
-      - ./bin/Release/net7.0/publish/
+      - ./bin/Debug/net7.0/
 
 # Job de test : lance les tests unitaires de l'API
 test:
