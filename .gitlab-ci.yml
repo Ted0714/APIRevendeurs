@@ -41,8 +41,6 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
-  tags:
-    kawa-runner1
 
 # Job de couverture de code : génère un rapport de couverture de code
 coverage:
