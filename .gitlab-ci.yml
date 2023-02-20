@@ -26,29 +26,41 @@ stages:
   - coverage
   - deploy
 
+# Configuration des tags pour les jobs
+variables:
+  BUILD_TAGS: "build,kawa1"
+  TEST_TAGS: "test,kawa1"
+  COVERAGE_TAGS: "coverage,kawa1"
+  DEPLOY_TAGS: "deploy,kawa1"
+
 # Job de build : compile l'API
 build:
+  image: mcr.microsoft.com/dotnet/sdk:5.0
   stage: build
+  tags:
+    - $BUILD_TAGS
   script:
     - dotnet restore
     - dotnet build --configuration Release
   artifacts:
     paths:
       - ./bin/Release/net5.0/publish/
-  tags:
-    - kawa-runner1
 
 # Job de test : lance les tests unitaires de l'API
 test:
+  image: mcr.microsoft.com/dotnet/sdk:5.0
   stage: test
+  tags:
+    - $TEST_TAGS
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
-  tags:
-    - kawa-runner1
 
 # Job de couverture de code : génère un rapport de couverture de code
 coverage:
+  image: mcr.microsoft.com/dotnet/sdk:5.0
   stage: coverage
+  tags:
+    - $COVERAGE_TAGS
   script:
     - dotnet tool install -g dotnet-reportgenerator-globaltool
     - dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
@@ -56,19 +68,19 @@ coverage:
   artifacts:
     paths:
       - ./TestResults/CoverageReport/
-  tags:
-    - kawa-runner1
 
 # Job de déploiement : déploie l'API sur un serveur
 deploy:
+  image: alpine:latest
   stage: deploy
+  tags:
+    - $DEPLOY_TAGS
   script:
+    - apk update && apk add openssh-client rsync
     - ssh user@server "mkdir -p /var/www/myapi"
-    - scp -r ./bin/Release/net5.0/publish/* user@server:/var/www/myapi
+    - rsync -avz --delete ./bin/Release/net5.0/publish/ user@server:/var/www/myapi/
   environment:
     name: production
     url: https://myapi.example.com
   only:
     - master
-  tags:
-    - kawa-runner1
