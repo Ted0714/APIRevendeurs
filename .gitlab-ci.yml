@@ -42,9 +42,6 @@ build:
   script:
     - dotnet restore
     - dotnet build --configuration Release
-  artifacts:
-    paths:
-      - ./bin/Release/net7.0/publish/
 
 # Job de test : lance les tests unitaires de l'API
 test:
