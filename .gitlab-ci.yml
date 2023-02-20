@@ -59,3 +59,15 @@ deploy:
   script:
     - ssh user@server "mkdir -p /var/www/myapi"
     - scp -r ./bin/Release/net5.0/publish/* user@server:/var/www/myapi
+  environment:
+    name: production
+    url: https://myapi.example.com
+  only:
+    - master
+
+# Configuration du runner local
+job_runners:
+  - name: my-local-runner
+    url: http://localhost:8081/
+    executor: shell
+    shell: powershell.exe
