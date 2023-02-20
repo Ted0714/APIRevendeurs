@@ -35,12 +35,16 @@ build:
   artifacts:
     paths:
       - ./bin/Release/net5.0/publish/
+  tags:
+    kawa-runner1
 
 # Job de test : lance les tests unitaires de l'API
 test:
   stage: test
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
+  tags:
+    kawa-runner1
 
 # Job de couverture de code : génère un rapport de couverture de code
 coverage:
@@ -52,6 +56,8 @@ coverage:
   artifacts:
     paths:
       - ./TestResults/CoverageReport/
+  tags:
+    kawa-runner1
 
 # Job de déploiement : déploie l'API sur un serveur
 deploy:
@@ -64,10 +70,5 @@ deploy:
     url: https://myapi.example.com
   only:
     - master
-
-# Configuration du runner local
-job_runners:
-  - name: my-local-runner
-    url: http://localhost:8081/
-    executor: shell
-    shell: powershell.exe
+  tags:
+    kawa-runner1
