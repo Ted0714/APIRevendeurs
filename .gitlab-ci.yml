@@ -35,8 +35,6 @@ build:
   artifacts:
     paths:
       - ./bin/Release/net5.0/publish/
-  tags:
-    kawa-runner1
 
 # Job de test : lance les tests unitaires de l'API
 test:
