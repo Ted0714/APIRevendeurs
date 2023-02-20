@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj": {}
+    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestAPIRevendeurs/TestAPIRevendeurs.csproj": {}
   },
   "projects": {
-    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj": {
+    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestAPIRevendeurs/TestAPIRevendeurs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
-        "projectName": "APIRevendeurs",
-        "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
+        "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestAPIRevendeurs/TestAPIRevendeurs.csproj",
+        "projectName": "TestAPIRevendeurs",
+        "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestAPIRevendeurs/TestAPIRevendeurs.csproj",
         "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-        "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/obj/",
+        "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestAPIRevendeurs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
@@ -38,21 +38,29 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[5.2.9, )"
             },
-            "Microsoft.EntityFrameworkCore.InMemory": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[17.3.2, )"
             },
-            "Newtonsoft.Json": {
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[3.1.2, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "xunit": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -67,9 +75,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

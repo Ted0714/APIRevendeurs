@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{0592426F-45AD-46ED-A0FC-2214AA6E5469}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.APIRevendeurs PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.TestAPIRevendeurs FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APIRevendeurs/Controllers/ProduitsController.cs">
+    <Files>
+      <File FileName="APIRevendeurs/Produits.cs" Line="1" Column="1" />
+      <File FileName="APIRevendeurs/Program.cs" Line="27" Column="1" />
+      <File FileName="APIRevendeurs/Details.cs" Line="1" Column="1" />
+      <File FileName="APIRevendeurs/Controllers/ProduitsController.cs" Line="41" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="APIRevendeurs" expanded="True">
+            <Node name="APIRevendeurs" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

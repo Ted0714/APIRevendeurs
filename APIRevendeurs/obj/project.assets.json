@@ -1046,11 +1046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathanbenoit/Projects/APIRevendeurs/APIRevendeurs/APIRevendeurs.csproj",
+      "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
       "projectName": "APIRevendeurs",
-      "projectPath": "/Users/nathanbenoit/Projects/APIRevendeurs/APIRevendeurs/APIRevendeurs.csproj",
+      "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
       "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-      "outputPath": "/Users/nathanbenoit/Projects/APIRevendeurs/APIRevendeurs/obj/",
+      "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
