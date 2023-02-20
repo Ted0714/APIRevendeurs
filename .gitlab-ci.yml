@@ -66,8 +66,10 @@ coverage:
     - dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
     - reportgenerator "-reports:TestResults/coverage.cobertura.xml" "-targetdir:TestResults/CoverageReport" "-reporttypes:Html;HtmlSummary"
   artifacts:
-    paths:
-      - ./TestResults/CoverageReport/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/coverage.xml
 
 # Job de déploiement : déploie l'API sur un serveur
 deploy:
