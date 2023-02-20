@@ -83,5 +83,8 @@ deploy:
     - apk update && apk add openssh-client rsync
     - ssh kawa@192.168.37.24 "mkdir -p /var/www/apikawa"
     - rsync -avz --delete ./bin/Release/net7.0/publish/ kawa@192.168.37.24:/var/www/apikawa/
+  environment:
+    name: production
   only:
     - main
+
