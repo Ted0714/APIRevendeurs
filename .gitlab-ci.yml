@@ -17,7 +17,7 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
 # Choix de l'image Docker pour les jobs
-image: mcr.microsoft.com/dotnet/sdk:5.0
+image: mcr.microsoft.com/dotnet/sdk:7.0
 
 # Définition des étapes du pipeline
 stages:
@@ -35,7 +35,7 @@ variables:
 
 # Job de build : compile l'API
 build:
-  image: mcr.microsoft.com/dotnet/sdk:5.0
+  image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: build
   tags:
     - $BUILD_TAGS
@@ -48,7 +48,7 @@ build:
 
 # Job de test : lance les tests unitaires de l'API
 test:
-  image: mcr.microsoft.com/dotnet/sdk:5.0
+  image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: test
   tags:
     - $TEST_TAGS
@@ -57,7 +57,7 @@ test:
 
 # Job de couverture de code : génère un rapport de couverture de code
 coverage:
-  image: mcr.microsoft.com/dotnet/sdk:5.0
+  image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: coverage
   tags:
     - $COVERAGE_TAGS
@@ -71,7 +71,7 @@ coverage:
 
 # Job de déploiement : déploie l'API sur un serveur
 deploy:
-  image: mcr.microsoft.com/dotnet/sdk:5.0
+  image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: deploy
   tags:
     - $DEPLOY_TAGS
