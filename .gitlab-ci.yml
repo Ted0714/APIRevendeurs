@@ -28,10 +28,10 @@ stages:
 
 # Configuration des tags pour les jobs
 variables:
-  BUILD_TAGS: "build,kawa1"
-  TEST_TAGS: "test,kawa1"
-  COVERAGE_TAGS: "coverage,kawa1"
-  DEPLOY_TAGS: "deploy,kawa1"
+  BUILD_TAGS: "build,runner-kawa1"
+  TEST_TAGS: "test,runner-kawa1"
+  COVERAGE_TAGS: "coverage,runner-kawa1"
+  DEPLOY_TAGS: "deploy,runner-kawa1"
 
 # Job de build : compile l'API
 build:
@@ -52,6 +52,8 @@ test:
   stage: test
   tags:
     - $TEST_TAGS
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
 
