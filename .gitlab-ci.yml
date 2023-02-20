@@ -30,8 +30,8 @@ stages:
 variables:
   BUILD_TAGS: "kawa-runner1"
   TEST_TAGS: "kawa-runner1"
-  COVERAGE_TAGS: "kawa-runner1"
-  DEPLOY_TAGS: "kawa-runner1"
+  COVERAGE_TAGS: "runner-kawa2"
+  DEPLOY_TAGS: "runner-kawa2"
 
 # Job de build : compile l'API
 build:
