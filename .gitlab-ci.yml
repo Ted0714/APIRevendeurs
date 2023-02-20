@@ -86,5 +86,5 @@ deploy:
   environment:
     name: production
     url: https://apikawa.example.com
-    only:
+  only:
     - main
