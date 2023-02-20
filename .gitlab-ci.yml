@@ -16,24 +16,24 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
-# Choix de l'image Docker pour les jobs
+
 image: mcr.microsoft.com/dotnet/sdk:7.0
 
-# Définition des étapes du pipeline
+
 stages:
   - build
   - test
   - coverage
   - deploy
 
-# Configuration des tags pour les jobs
+
 variables:
   BUILD_TAGS: "kawa-runner1"
   TEST_TAGS: "kawa-runner2"
   COVERAGE_TAGS: "runner-kawa2"
   DEPLOY_TAGS: "runner-kawa1"
 
-# Job de build : compile l'API
+
 build:
   image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: build
@@ -46,7 +46,7 @@ build:
     paths:
       - ./bin/Debug/net7.0/
 
-# Job de test : lance les tests unitaires de l'API
+
 test:
   image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: test
@@ -57,7 +57,7 @@ test:
   script:
     - dotnet test --configuration Release --logger "trx;LogFileName=test_results.trx"
 
-# Job de couverture de code : génère un rapport de couverture de code
+
 coverage:
   image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: coverage
@@ -73,7 +73,7 @@ coverage:
         coverage_format: cobertura
         path: coverage/coverage.xml
 
-# Job de déploiement : déploie l'API sur un serveur
+
 deploy:
   image: mcr.microsoft.com/dotnet/sdk:7.0
   stage: deploy
