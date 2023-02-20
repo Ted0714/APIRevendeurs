@@ -29,9 +29,9 @@ stages:
 # Configuration des tags pour les jobs
 variables:
   BUILD_TAGS: "kawa-runner1"
-  TEST_TAGS: "kawa-runner1"
+  TEST_TAGS: "kawa-runner2"
   COVERAGE_TAGS: "runner-kawa2"
-  DEPLOY_TAGS: "runner-kawa2"
+  DEPLOY_TAGS: "runner-kawa1"
 
 # Job de build : compile l'API
 build:
@@ -85,4 +85,4 @@ deploy:
     - rsync -avz --delete ./bin/Release/net7.0/publish/ user@server:/var/www/apikawa/
   environment:
     name: production
-    url: https://apikawa.com
+    url: https://apikawa.example.com
