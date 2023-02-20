@@ -85,4 +85,4 @@ deploy:
     - rsync -avz --delete ./bin/Release/net7.0/publish/ user@server:/var/www/apikawa/
   environment:
     name: production
-    url: https://apikawa.example.com
+    url: https://apikawa.com
