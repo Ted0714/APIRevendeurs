@@ -44,7 +44,7 @@ build:
     - dotnet build --configuration Release
   artifacts:
     paths:
-      - ./bin/Release/net5.0/publish/
+      - ./bin/Release/net7.0/publish/
 
 # Job de test : lance les tests unitaires de l'API
 test:
@@ -78,9 +78,7 @@ deploy:
   script:
     - apk update && apk add openssh-client rsync
     - ssh user@server "mkdir -p /var/www/myapi"
-    - rsync -avz --delete ./bin/Release/net5.0/publish/ user@server:/var/www/myapi/
+    - rsync -avz --delete ./bin/Release/net7.0/publish/ user@server:/var/www/myapi/
   environment:
     name: production
     url: https://myapi.example.com
-  only:
-    - master
