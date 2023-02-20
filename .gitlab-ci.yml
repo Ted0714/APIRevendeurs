@@ -53,7 +53,7 @@ coverage:
     paths:
       - ./TestResults/CoverageReport/
   tags:
-    kawa-runner1
+    - kawa-runner1
 
 # Job de déploiement : déploie l'API sur un serveur
 deploy:
@@ -67,4 +67,4 @@ deploy:
   only:
     - master
   tags:
-    kawa-runner1
+    - kawa-runner1
