@@ -12,7 +12,7 @@ public class TestProduitsController
     {
         var testProducts = GetTestProducts();
         var controller = new ProduitsController();
-        var result = controller.GetAsync() as Task<List<APIRevendeurs.Produits>>;
+        var result = controller.GetAsync();
         Assert.AreEqual(testProducts, result);
     }
 
@@ -21,7 +21,7 @@ public class TestProduitsController
     {
         var testProducts = GetTestProduct(4);
         var controller = new ProduitsController();
-        var result = controller.Get(4) as Task<APIRevendeurs.Produits>;
+        var result = controller.Get(4) as Task<Produits>;
         Assert.IsNotNull(result);
         Assert.AreEqual(testProducts, result);
     }

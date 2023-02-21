@@ -1046,11 +1046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
+      "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj",
       "projectName": "APIRevendeurs",
-      "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj",
+      "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj",
       "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-      "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/obj/",
+      "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
@@ -1113,7 +1113,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

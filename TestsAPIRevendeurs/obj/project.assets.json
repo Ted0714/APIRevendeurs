@@ -3615,11 +3615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
+      "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
       "projectName": "TestsAPIRevendeurs",
-      "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
+      "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
       "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-      "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/TestsAPIRevendeurs/obj/",
+      "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
@@ -3634,8 +3634,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj": {
-              "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs/APIRevendeurs/APIRevendeurs.csproj"
+            "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj": {
+              "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj"
             }
           }
         }
@@ -3683,7 +3683,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }
