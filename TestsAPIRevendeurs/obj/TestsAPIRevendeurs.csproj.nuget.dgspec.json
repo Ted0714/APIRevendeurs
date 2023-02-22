@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj": {}
+    "/Users/teddycoustaury/RiderProjects/api-revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj": {}
   },
   "projects": {
-    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj": {
+    "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/APIRevendeurs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj",
+        "projectUniqueName": "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/APIRevendeurs.csproj",
         "projectName": "APIRevendeurs",
-        "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj",
-        "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-        "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/obj/",
+        "projectPath": "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/APIRevendeurs.csproj",
+        "packagesPath": "/Users/teddycoustaury/.nuget/packages/",
+        "outputPath": "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
+          "/Users/teddycoustaury/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -78,17 +82,17 @@
         }
       }
     },
-    "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj": {
+    "/Users/teddycoustaury/RiderProjects/api-revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
+        "projectUniqueName": "/Users/teddycoustaury/RiderProjects/api-revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
         "projectName": "TestsAPIRevendeurs",
-        "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
-        "packagesPath": "/Users/nathanbenoit/.nuget/packages/",
-        "outputPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/TestsAPIRevendeurs/obj/",
+        "projectPath": "/Users/teddycoustaury/RiderProjects/api-revendeurs/TestsAPIRevendeurs/TestsAPIRevendeurs.csproj",
+        "packagesPath": "/Users/teddycoustaury/.nuget/packages/",
+        "outputPath": "/Users/teddycoustaury/RiderProjects/api-revendeurs/TestsAPIRevendeurs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nathanbenoit/.nuget/NuGet/NuGet.Config"
+          "/Users/teddycoustaury/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -100,8 +104,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj": {
-                "projectPath": "/Users/nathanbenoit/Documents/GitHub/API-Revendeurs-GITLAB/APIRevendeurs/APIRevendeurs.csproj"
+              "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/APIRevendeurs.csproj": {
+                "projectPath": "/Users/teddycoustaury/RiderProjects/api-revendeurs/APIRevendeurs/APIRevendeurs.csproj"
               }
             }
           }

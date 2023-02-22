@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -15,6 +16,7 @@ namespace APIRevendeurs.Controllers
     {
         // GET: produits
         [HttpGet]
+        [Authorize]
         public async Task<List<Produits>> GetAsync()
         {
             HttpClient client = new HttpClient();
@@ -25,6 +27,7 @@ namespace APIRevendeurs.Controllers
 
         // GET produits/id
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<Produits> Get(int id)
         {
             HttpClient client = new HttpClient();
