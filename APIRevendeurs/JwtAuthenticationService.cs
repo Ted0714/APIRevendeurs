@@ -7,26 +7,38 @@ using System.Text;
 using System.Threading.Tasks;
 using APIRevendeurs.Models;
 using Microsoft.IdentityModel.Tokens;
+using MySql.Data.MySqlClient;
 
 namespace APIRevendeurs
 {
     
     public class JwtAuthenticationService : IJwtAuthenticationService
     {
-        private readonly List<User> Users = new List<User>()
-        {
-            new User
-            {
-                Id = 1,
-                Username = "Admin",
-                Email = "admin@gmail.com",
-                Password = "PwdAdmin"
-            }
-        };
         
         public User Authenticate(string email, string password)
         {
-            return Users.Where(u => u.Email.ToUpper().Equals(email.ToUpper())
+            List<User> users = new List<User>();
+            string cs = "server=localhost;port=8889;database=api-revendeur;uid=root;pwd=root";
+            using var connection = new MySqlConnection(cs);
+            connection.Open();
+            
+            string sql = "SELECT * FROM user";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            using MySqlDataReader reader = command.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                User user = new User();
+                user.Id = reader.GetInt32("id");
+                user.Username = reader.GetString("username");
+                user.Email = reader.GetString("email");
+                user.Password = reader.GetString("password");
+
+                users.Add(user);
+            }
+            connection.Close();
+            
+            return users.Where(u => u.Email.ToUpper().Equals(email.ToUpper())
                                     && u.Password.Equals(password)).FirstOrDefault();
         }
         

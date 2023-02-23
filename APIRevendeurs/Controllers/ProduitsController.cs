@@ -16,7 +16,6 @@ namespace APIRevendeurs.Controllers
     {
         // GET: produits
         [HttpGet]
-        [Authorize]
         public async Task<List<Produits>> GetAsync()
         {
             HttpClient client = new HttpClient();
@@ -35,5 +34,6 @@ namespace APIRevendeurs.Controllers
             var data = JsonConvert.DeserializeObject<Produits>(json);
             return data;
         }
+        
     }
 }
